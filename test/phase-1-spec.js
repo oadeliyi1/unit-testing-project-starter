@@ -13,41 +13,37 @@ describe("isFive(num)", () => {
     expect(result1).to.equal(true);
     expect(result2).to.equal(false);
 
-    //Arrange
-
-    //Act
-
-    //Assert
-
-
   });
 });
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
+    let oddNum = 1;
+
 
     //Act
+    let result = isOdd(oddNum);
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.equal(true);
 
   });
   it("should return false if the num is even", () => {
     //Arrange
+    let evenNum = 2;
 
     //Act
+    let result = isOdd(evenNum);
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.equal(false);
 
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
-
-    //Act
-
+    let notANum = " ";
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(() => isOdd(notANum)).to.throw(Error);
 
   });
 });
