@@ -7,6 +7,7 @@ describe('Word', function () {
 
   beforeEach("set up a Word instance", () => {
     entry = new Word("absolutely");
+    entry2 = new Word("crazy");
   })
 
   describe('Word constructor function', function () {
@@ -51,11 +52,16 @@ describe('Word', function () {
 })
   it('should return the word converted to pig latin', function() {
     //Arrange
-
+    let expected = "absolutelyyay";
+    let expected2 = "azycray";
     //Act
 
+    let result = entry.pigLatin();
+    let result2 = entry2.pigLatin();
+
     //Assert
-     expect.fail('Remove this expect.fail and replace it with your test');
+     expect(result).to.eql(expected);
+     expect(result2).to.eql(expected2);
 
   })
 })
