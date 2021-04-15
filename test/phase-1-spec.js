@@ -51,22 +51,31 @@ describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {
       //Arrange
+      let min = 0;
+      let max = 3;
+
 
       //Act
+      let test = myRange(min, max);
+      let result = [0, 1, 2, 3];
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(test).to.eql(result);
 
     });
   });
   context("if step is provided", () => {
     it("should return the correct array", () => {
       //Arrange
+      let min = 0;
+      let max = 4;
 
       //Act
+      let test = myRange(min, max, 2);
+      let result = [0, 2, 4];
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(test).to.eql(result);
 
     });
   });
@@ -76,7 +85,7 @@ describe("myRange(min, max, step)", () => {
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(()=> myRange('hey','hi','hello')).to.throw(Error)
 
   });
 });

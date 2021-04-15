@@ -29,7 +29,10 @@ function isOdd(number) {
 
 function myRange(min, max, step=1) {
   const array = []
-  for (let i = min; i <= max; i++) {
+  if (typeof min !== 'number' || typeof max !== 'number' || typeof step !== 'number') {
+   throw new Error("I need numbers!")
+  }
+  for (let i = min; i <= max; i+=step) {
     array.push(i);
   }
   return array
@@ -60,3 +63,6 @@ function fizzBuzz(max) {
 
 
 module.exports = {isFive, isOdd, myRange, fizzBuzz }
+
+
+
