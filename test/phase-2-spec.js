@@ -24,11 +24,12 @@ describe('hiddenCounter()', function () {
 
   it('should return a function that will increment the counter when invoked', function () {
     //Arrange
-
+    let expected = 1;
     //Act
+    let result = hiddenCounter();
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result()).to.equal(expected);
   })
 })
 
@@ -36,6 +37,7 @@ describe('hiddenCounter()', function () {
 describe('myMap', function () {
  it("should function like the built in Array#map", function () {
     //Arrange
+   
 
     //Act
 
