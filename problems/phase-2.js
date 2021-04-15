@@ -59,9 +59,10 @@ array of numbers and returns the average number. Assign the below function to a
 variable using the const keyword.
 */
 const avgValue = (array) => {
-  let sum = array.reduce((el, sum = 0) => (sum += el));
+  let sum = 0;
+   array.forEach((el) => (sum += el));
 
-  let avg = sum / array.length - 1;
+  let avg = sum / array.length;
   return avg;
 };
 

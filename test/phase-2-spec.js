@@ -71,11 +71,13 @@ describe('myMap', function () {
 describe('avgValue', function () {
   it('should return the average of an array of numbers', function () {
      //Arrange
-    
+    let array = [1, 2, 3];
+    let expected = 2;
     //Act
-
+    let result = avgValue(array);
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(result).to.equal(expected);
+    
 
   })
 })
